@@ -1,0 +1,42 @@
+[
+  { "id":"measles_cities",
+    "data":[
+    {"month": "jan.",
+      "count":177.15
+    },
+    {"month": "feb.",
+      "count": 230.01
+    },
+    {"month": "mar.",
+      "count": 159.45
+    },
+    {"month": "apr.",
+      "count": 174.45
+    },
+    {"month": "may",
+      "count": 191.60
+    },
+    {"month": "jun.",
+      "count": 140.73
+    },
+    {"month": "jul.",
+      "count": 179.30
+    },
+    {"month": "aug.",
+      "count": 106.43
+    },
+    {"month": "sep.",
+      "count": 220.14
+    },
+    {"month": "oct.",
+      "count": 130.86
+    },
+    {"month": "nov.",
+      "count": 127.00
+    },
+    {"month": "dec.",
+      "count": 246.29
+    }
+    ]
+  }
+]
