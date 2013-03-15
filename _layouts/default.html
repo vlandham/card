@@ -28,9 +28,16 @@
         <script src="js/plugins.js"></script>
         <script src="js/vendor/d3.v3.min.js"></script>
         <script src="js/vendor/coffee-script.js"></script>
+        {% if page.js %}
+        {% for js in page.js %}
+
+        <script src="{{js}}"></script>
+        {% endfor %}
+        {% endif %}
         {% if page.coffee %}
         <script type="text/coffeescript" src="{{ page.coffee }}"></script>
         {% endif %}
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
