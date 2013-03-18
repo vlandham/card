@@ -1,5 +1,11 @@
 root = exports ? this
 
+salmon = "#FC6E60"
+blue = "#6ED3CD"
+dark_yellow = "#AEA020"
+yellow = "#FEE92C"
+gray = "#303031"
+
 Plot = () ->
   width = 600
   height = 600
@@ -69,8 +75,14 @@ Plot = () ->
       .append("path")
       .attr("class", "layer")
       .attr("d", (d) -> area(d.data))
-      .attr("fill", (d) -> "url(#lines-tight-pattern)")
-      .attr("stroke", "black")
+      .attr "fill", (d,i) ->
+        if i == 0
+          "url(#lines-tight-pattern)"
+        else
+          "url(#diag-pattern)"
+      .attr "stroke", (d,i) -> 
+        color = if i == 0 then salmon else blue
+        d3.hsl(color).darker()
       .attr("stroke-width", 2)
 
     axis =vis.selectAll(".axis")
@@ -84,7 +96,7 @@ Plot = () ->
       .attr("x2", 0)
       .attr("y1", 0)
       .attr("y2", outerRadius + buffer)
-      .attr("stroke", "black")
+      .attr("stroke", gray)
       .attr("stroke-width", 1.5)
 
     # axis.append("text")
@@ -117,15 +129,17 @@ Plot = () ->
       .attr("class", "arc")
       .append("path")
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 3)
+      .attr("stroke", gray)
+      .attr("stroke-width", 2.4)
       .attr("d", arc)
 
     vis.append("circle")
       .attr("cx", 0)
       .attr("cy", 0)
       .attr("r", outerRadius + buffer - 8)
-      .attr("class", "ring")
+      .attr("fill", "none")
+      .attr("stroke", gray)
+      .attr("stroke-width", 2.4)
 
     # vis.append("circle")
     #   .attr("cx", 0)
@@ -164,7 +178,7 @@ $ ->
   hatch1.append("path")
     .attr("d", "M0 0 H 5")
     .style("fill", "none")
-    .style("stroke", "#000")
+    .style("stroke", salmon)
     .style("stroke-width", 1.6)
 
   diag = defs.append("pattern")
@@ -177,13 +191,13 @@ $ ->
   diag.append("path")
     .attr("d", "M0 0 l5 5")
     .style("fill", "none")
-    .style("stroke", "red")
+    .style("stroke", blue)
     .style("stroke-width", 1)
-  diag.append("path")
-    .attr("d", "M5 0 l-5 5")
-    .style("fill", "none")
-    .style("stroke", "red")
-    .style("stroke-width", 1)
+  # diag.append("path")
+  #   .attr("d", "M5 0 l-5 5")
+  #   .style("fill", "none")
+  #   .style("stroke", "red")
+  #   .style("stroke-width", 1)
     
 
   dots = defs.append("pattern")

@@ -8,7 +8,7 @@
       "count": 230.01
     },
     {"month": "mar.",
-      "count": 159.45
+      "count": 259.45
     },
     {"month": "apr.",
       "count": 174.45
@@ -17,13 +17,13 @@
       "count": 191.60
     },
     {"month": "jun.",
-      "count": 140.73
+      "count": 240.73
     },
     {"month": "jul.",
-      "count": 179.30
+      "count": 279.30
     },
     {"month": "aug.",
-      "count": 106.43
+      "count": 156.43
     },
     {"month": "sep.",
       "count": 220.14
@@ -33,6 +33,46 @@
     },
     {"month": "nov.",
       "count": 127.00
+    },
+    {"month": "dec.",
+      "count": 246.29
+    }
+    ]
+  },
+  { "id":"measles_town",
+    "data":[
+    {"month": "jan.",
+      "count":107.15
+    },
+    {"month": "feb.",
+      "count": 130.01
+    },
+    {"month": "mar.",
+      "count": 110.45
+    },
+    {"month": "apr.",
+      "count": 274.45
+    },
+    {"month": "may",
+      "count": 221.60
+    },
+    {"month": "jun.",
+      "count": 340.73
+    },
+    {"month": "jul.",
+      "count": 179.30
+    },
+    {"month": "aug.",
+      "count": 106.43
+    },
+    {"month": "sep.",
+      "count": 320.14
+    },
+    {"month": "oct.",
+      "count": 230.86
+    },
+    {"month": "nov.",
+      "count": 227.00
     },
     {"month": "dec.",
       "count": 246.29
